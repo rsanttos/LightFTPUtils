@@ -37,8 +37,8 @@ public class Arquivo {
 	}
 	
 
-	public static String listarArquivosDoDiretorio(String caminhoDiretorioCliente) {
-		String caminhoCompleto = caminhoDiretorioCliente;
+	public static String listarArquivosDoDiretorio() {
+		String caminhoCompleto = "arquivos";
 		File diretorio = new File(caminhoCompleto);
 		String listaArquivos = "";
 		
@@ -47,5 +47,14 @@ public class Arquivo {
 		}
 		
 		return listaArquivos;
+	}
+	
+	public static int qtdArquivosDiretorio() {
+		int quantidade = 0;
+		String caminhoCompleto = "arquivos";
+		File diretorio = new File(caminhoCompleto);
+		quantidade = diretorio.listFiles().length;
+		
+		return quantidade;
 	}
 }
